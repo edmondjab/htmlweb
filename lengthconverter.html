@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<title>Feet to Meters Length Converter</title>
+<head>
+<style>
+h1 {
+  position: absolute;
+  font-style: normal;
+  font-family: verdana;
+  font-size:300%;
+  left: 300px;
+  top: 80px;
+}
+
+h2 {
+  position: absolute;
+  font-style: italic;
+  font-family: verdana;
+  font-size:200%;
+  left: 120px;
+  top: 200px;
+}
+
+h3 {
+  position: absolute;
+  font-style: normal;
+  font-family: verdana;
+  font-size:200%;
+  left: 300px;
+  top: 400px;
+}
+
+h4 {
+  position: absolute;
+  font-style: normal;
+  font-family: verdana;
+  font-size:220%;
+  left: 300px;
+  top: 300px;
+}
+
+body {
+  background-color: rgb(100, 220, 255);
+     
+</style>
+</head>
+<body>
+
+<h1>Emo's Length Converter</h1>
+<h2>Enter a value to convert any value from feet to Meters:</h2>
+
+<h4>
+  <label>Feet:</label>
+  <input id="inputFeet" type="number" placeholder="Feet" oninput="LengthConverter(this.value)" onchange="LengthConverter
+
+(this.value)">
+</h4>
+<h3>Meters: <span id="outputMeters" style="font-size:180%;"></span></h3>
+
+<script>
+function LengthConverter(valNum) {
+  document.getElementById("outputMeters").innerHTML=valNum/3.2808;
+}
+</script>
+</body>
+</html>
