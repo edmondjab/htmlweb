@@ -1,0 +1,122 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<title>Miles to Kilometers Length Converter</title>
+<head>
+<style>
+  .hide {
+  display: none;
+}
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+}
+h1 {
+  position: absolute;
+  font-style: normal;
+  font-family: verdana;
+  font-size:300%;
+  left: 300px;
+  top: 80px;
+}
+
+h2 {
+  position: absolute;
+  font-style: italic;
+  font-family: verdana;
+  font-size:200%;
+  left: 170px;
+  top: 200px;
+}
+
+h3 {
+  position: absolute;
+  font-style: normal;
+  font-family: verdana;
+  font-size:200%;
+  left: 300px;
+  top: 400px;
+}
+
+h4 {
+  position: absolute;
+  font-style: normal;
+  font-family: verdana;
+  font-size:220%;
+  left: 300px;
+  top: 300px;
+}
+
+body {
+  background-color:linen;
+     
+</style>
+</head>
+<body>
+
+  <div class="myDIV">
+<h1>Emo's Length Converter</h1>
+
+
+
+<h2 style="background-color:Tomato;">Enter a value to convert it from Miles to Kilometers:</h2>
+
+
+<h4>
+  <label>Miles</label>
+  <input id="inputMiles" type="number" placeholder="Miles" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+</h4>
+
+<h3>Kilometers: <span id="outputKilometers" style="font-size:180%;"></span></h3>
+
+</div>
+<div class="hide" style="font-size:180%;">Miles to Kilometers</div>
+
+<script>
+function LengthConverter(valNum) {
+  document.getElementById("outputKilometers").innerHTML=valNum/0.62137;
+}
+</script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
+</html>
+
+
+
